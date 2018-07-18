@@ -1,0 +1,2 @@
+class PoemListsController < ApplicationController
+end
