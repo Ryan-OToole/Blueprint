@@ -29,4 +29,10 @@ class UsersController < ApplicationController
   end
 end
 
+
+  def user_poems
+    @user = User.find_by(id: params[:id])
+    render json: @user.poems
+  end
+
 end

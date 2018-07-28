@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   resources :users
   resources :poems
 
+  get '/users/:user_id/poems', to: 'users#user_poems'
+
   # This is login:
   resources :sessions, only: [:create]
+
   # post '/sessions/', to: 'sessions#create'
 
 

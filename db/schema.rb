@@ -10,18 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_17_144902) do
+ActiveRecord::Schema.define(version: 2018_07_28_221122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "poem_lists", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "poem_id"
+    t.integer "user_id"
+    t.integer "poem_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["poem_id"], name: "index_poem_lists_on_poem_id"
-    t.index ["user_id"], name: "index_poem_lists_on_user_id"
   end
 
   create_table "poems", force: :cascade do |t|
@@ -39,6 +37,4 @@ ActiveRecord::Schema.define(version: 2018_07_17_144902) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "poem_lists", "poems"
-  add_foreign_key "poem_lists", "users"
 end
