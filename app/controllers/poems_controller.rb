@@ -13,6 +13,8 @@ class PoemsController < ApplicationController
 
   def create
     poem = Poem.create(poem_params)
+    PoemList.create(user_id: params["user_id"], poem_id: poem.id)
+
     render json: poem, status: 201
   end
 
