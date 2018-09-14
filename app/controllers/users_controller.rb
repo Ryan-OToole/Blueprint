@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = User.find_by(id: params[:user_id])
     render json: @user
   end
 
@@ -31,7 +31,7 @@ end
 
 
   def user_poems
-    @user = User.find_by(id: params[:id])
+    @user = User.find(params[:user_id])
     render json: @user.poems
   end
 
