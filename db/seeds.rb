@@ -5,6 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-guest = User.create(username: 'Guest', password: 'guest', display_name:"Guest")
-poem = Poem.create(title: 'Ferocious', body: "Bear materials need to decompose at high temperatures")
